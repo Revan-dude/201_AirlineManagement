@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<airline name="Austrian Sky"
+         headquarters="Vienna"
+         alliance="Star Alliance">
+
+
+    <airports>
+        <airport code="VIE">
+            <name>Vienna International pojos.Airport</name>
+            <city>Vienna</city>
+            <country>Austria</country>
+        </airport>
+        <airport code="FRA">
+            <name>Frankfurt pojos.Airport</name>
+            <city>Frankfurt</city>
+            <country>Germany</country>
+        </airport>
+        <airport code="LHR">
+            <name>Heathrow pojos.Airport</name>
+            <city>London</city>
+            <country>United Kingdom</country>
+        </airport>
+        <airport code="CDG">
+            <name>Charles de Gaulle pojos.Airport</name>
+            <city>Paris</city>
+            <country>France</country>
+        </airport>
+        <airport code="FCO">
+            <name>Leonardo da Vinci pojos.Airport</name>
+            <city>Rome</city>
+            <country>Italy</country>
+        </airport>
+        <airport code="ZRH">
+            <name>Zurich pojos.Airport</name>
+            <city>Zurich</city>
+            <country>Switzerland</country>
+        </airport>
+    </airports>
+
+
+    <aircraft>
+        <plane id="AC01">
+            <model>Airbus A320</model>
+            <capacity>180</capacity>
+        </plane>
+        <plane id="AC02">
+            <model>Embraer E195</model>
+            <capacity>120</capacity>
+        </plane>
+        <plane id="AC03">
+            <model>Airbus A220</model>
+            <capacity>145</capacity>
+        </plane>
+    </aircraft>
+
+
+    <passengers>
+        <passenger id="PA01" loyalty="Gold">
+            <firstName>Anna</firstName>
+            <lastName>Huber</lastName>
+            <birthDate>12.04.1995</birthDate>
+            <preferences>window vegetarian</preferences>
+            <emergencyContact>Martin Huber</emergencyContact>
+        </passenger>
+        <passenger id="PA02">
+            <firstName>Max</firstName>
+            <lastName>Gruber</lastName>
+            <birthDate>23.11.1988</birthDate>
+            <preferences>aisle</preferences>
+        </passenger>
+        <passenger id="PA03" loyalty="Silver">
+            <firstName>Lisa</firstName>
+            <lastName>Berger</lastName>
+            <birthDate>07.06.2001</birthDate>
+            <preferences>window vegan</preferences>
+        </passenger>
+        <passenger id="PA04">
+            <firstName>Thomas</firstName>
+            <lastName>Wagner</lastName>
+            <birthDate>18.02.1979</birthDate>
+            <preferences>aisle business</preferences>
+        </passenger>
+        <passenger id="PA05">
+            <firstName>Sarah</firstName>
+            <lastName>Leitner</lastName>
+            <birthDate>29.09.1992</birthDate>
+            <preferences>window</preferences>
+        </passenger>
+        <passenger id="PA06" loyalty="Gold">
+            <firstName>David</firstName>
+            <lastName>Steiner</lastName>
+            <birthDate>05.12.1985</birthDate>
+            <preferences>aisle vegetarian</preferences>
+            <specialAssistance>Priority boarding</specialAssistance>
+        </passenger>
+        <passenger id="PA07">
+            <firstName>Julia</firstName>
+            <lastName>Maier</lastName>
+            <birthDate>14.03.1998</birthDate>
+            <preferences>window</preferences>
+        </passenger>
+        <passenger id="PA08">
+            <firstName>Michael</firstName>
+            <lastName>Hofer</lastName>
+            <birthDate>30.07.1975</birthDate>
+            <preferences>aisle glutenfree</preferences>
+        </passenger>
+    </passengers>
+
+
+    <flights>
+        <flight number="OS101">
+            <origin>VIE</origin>
+            <destination>FRA</destination>
+            <aircraft>AC01</aircraft>
+            <departure>15.11.2026 08:00</departure>
+            <arrival>15.11.2026 09:30</arrival>
+            <status>Scheduled</status>
+        </flight>
+        <flight number="OS102">
+            <origin>VIE</origin>
+            <destination>LHR</destination>
+            <aircraft>AC02</aircraft>
+            <departure>15.11.2026 10:00</departure>
+            <arrival>15.11.2026 12:15</arrival>
+            <status>Scheduled</status>
+        </flight>
+        <flight number="OS103">
+            <origin>FRA</origin>
+            <destination>VIE</destination>
+            <aircraft>AC01</aircraft>
+            <departure>15.11.2026 13:00</departure>
+            <arrival>15.11.2026 14:30</arrival>
+            <status>Delayed</status>
+        </flight>
+        <flight number="OS104">
+            <origin>VIE</origin>
+            <destination>CDG</destination>
+            <aircraft>AC03</aircraft>
+            <departure>16.11.2026 09:00</departure>
+            <arrival>16.11.2026 11:00</arrival>
+            <status>Scheduled</status>
+        </flight>
+        <flight number="OS105">
+            <origin>VIE</origin>
+            <destination>FCO</destination>
+            <aircraft>AC02</aircraft>
+            <departure>16.11.2026 14:00</departure>
+            <arrival>16.11.2026 15:45</arrival>
+            <status>Cancelled</status>
+        </flight>
+        <flight number="OS106">
+            <origin>ZRH</origin>
+            <destination>VIE</destination>
+            <aircraft>AC03</aircraft>
+            <departure>17.11.2026 07:30</departure>
+            <arrival>17.11.2026 09:00</arrival>
+            <status>Scheduled</status>
+        </flight>
+        <flight number="OS107">
+            <origin>VIE</origin>
+            <destination>ZRH</destination>
+            <aircraft>AC01</aircraft>
+            <departure>17.11.2026 12:00</departure>
+            <arrival>17.11.2026 13:30</arrival>
+            <status>Scheduled</status>
+        </flight>
+        <flight number="OS108">
+            <origin>LHR</origin>
+            <destination>VIE</destination>
+            <aircraft>AC02</aircraft>
+            <departure>18.11.2026 18:00</departure>
+            <arrival>18.11.2026 20:15</arrival>
+            <status>Scheduled</status>
+        </flight>
+    </flights>
+
+
+    <bookings>
+        <booking number="B001">
+            <passenger>PA01</passenger>
+            <flight>OS101</flight>
+            <seat>12A</seat>
+            <class>Economy</class>
+            <price>€ 249,90</price>
+        </booking>
+        <booking number="B002">
+            <passenger>PA02</passenger>
+            <flight>OS101</flight>
+            <seat>12B</seat>
+            <class>Economy</class>
+            <price>€ 199,90</price>
+        </booking>
+        <booking number="B003">
+            <passenger>PA03</passenger>
+            <flight>OS101</flight>
+            <seat>3A</seat>
+            <class>Business</class>
+            <price>€ 599,90</price>
+        </booking>
+        <booking number="B004">
+            <passenger>PA04</passenger>
+            <flight>OS102</flight>
+            <seat>2A</seat>
+            <class>Business</class>
+            <price>€ 899,00</price>
+        </booking>
+        <booking number="B005">
+            <passenger>PA05</passenger>
+            <flight>OS102</flight>
+            <seat>14A</seat>
+            <class>Economy</class>
+            <price>€ 329,90</price>
+        </booking>
+        <booking number="B006">
+            <passenger>PA01</passenger>
+            <flight>OS102</flight>
+            <seat>14B</seat>
+            <class>Premium Economy</class>
+            <price>€ 459,90</price>
+        </booking>
+        <booking number="B007">
+            <passenger>PA06</passenger>
+            <flight>OS103</flight>
+            <seat>1A</seat>
+            <class>First</class>
+            <price>€ 1199,00</price>
+        </booking>
+        <booking number="B008">
+            <passenger>PA02</passenger>
+            <flight>OS103</flight>
+            <seat>16C</seat>
+            <class>Economy</class>
+            <price>€ 189,90</price>
+        </booking>
+        <booking number="B009">
+            <passenger>PA07</passenger>
+            <flight>OS104</flight>
+            <seat>18A</seat>
+            <class>Economy</class>
+            <price>€ 279,90</price>
+        </booking>
+        <booking number="B010">
+            <passenger>PA08</passenger>
+            <flight>OS104</flight>
+            <seat>4A</seat>
+            <class>Business</class>
+            <price>€ 749,00</price>
+        </booking>
+        <booking number="B011">
+            <passenger>PA01</passenger>
+            <flight>OS104</flight>
+            <seat>18B</seat>
+            <class>Economy</class>
+            <price>€ 229,90</price>
+        </booking>
+        <booking number="B012">
+            <passenger>PA03</passenger>
+            <flight>OS105</flight>
+            <seat>10A</seat>
+            <class>Economy</class>
+            <price>€ 199,90</price>
+        </booking>
+        <booking number="B013">
+            <passenger>PA04</passenger>
+            <flight>OS105</flight>
+            <seat>2B</seat>
+            <class>Business</class>
+            <price>€ 499,90</price>
+        </booking>
+        <booking number="B014">
+            <passenger>PA05</passenger>
+            <flight>OS106</flight>
+            <seat>15A</seat>
+            <class>Economy</class>
+            <price>€ 159,90</price>
+        </booking>
+        <booking number="B015">
+            <passenger>PA06</passenger>
+            <flight>OS106</flight>
+            <seat>3A</seat>
+            <class>Business</class>
+            <price>€ 649,90</price>
+        </booking>
+        <booking number="B016">
+            <passenger>PA07</passenger>
+            <flight>OS107</flight>
+            <seat>21A</seat>
+            <class>Economy</class>
+            <price>€ 189,90</price>
+        </booking>
+        <booking number="B017">
+            <passenger>PA08</passenger>
+            <flight>OS107</flight>
+            <seat>5C</seat>
+            <class>Premium Economy</class>
+            <price>€ 389,90</price>
+        </booking>
+        <booking number="B018">
+            <passenger>PA01</passenger>
+            <flight>OS107</flight>
+            <seat>21B</seat>
+            <class>Economy</class>
+            <price>€ 179,90</price>
+        </booking>
+        <booking number="B019">
+            <passenger>PA02</passenger>
+            <flight>OS108</flight>
+            <seat>11A</seat>
+            <class>Economy</class>
+            <price>€ 299,90</price>
+        </booking>
+        <booking number="B020">
+            <passenger>PA03</passenger>
+            <flight>OS108</flight>
+            <seat>2A</seat>
+            <class>Business</class>
+            <price>€ 799,90</price>
+        </booking>
+    </bookings>
+
+
+</airline>
