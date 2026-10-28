@@ -2,15 +2,17 @@ import enums.BookingClass;
 import enums.FlightStatus;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
 import jakarta.xml.bind.Unmarshaller;
 import pojos.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.math.BigDecimal;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class AirlineTester {
@@ -24,8 +26,12 @@ public class AirlineTester {
         return airline;
     }
 
-    public void write(Airline airline, String fileName) {
+    public void write(Airline airline, String fileName) throws JAXBException, IOException {
+        JAXBContext context = JAXBContext.newInstance(Airline.class);
+        Marshaller marshaller = context.createMarshaller();
 
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        marshaller.marshal(airline, new File(Path.of(System.getProperty("user.dir"), "src", "main", "resources", fileName).toUri()));
     }
 
     public List<Flight> flightsSorted(Airline airline) {
@@ -143,7 +149,7 @@ public class AirlineTester {
 
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JAXBException, IOException {
         AirlineTester tester = new AirlineTester();
 
         Airline airline = new Airline();
